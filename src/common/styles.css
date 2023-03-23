@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #dde0ea;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.footer {
+    height: 100px;
+    margin-top: auto;
+    background-color: #dde0ea;
+}
+
+
+
+.MenuDiv {
+    background-color: lightblue;
+    width: 15%;
+    min-height: 500px;
+    max-height: 100%;
+    float: left;
+}
+
+
+.MainDiv {
+    background-color: lightgreen;
+    width: 85%;
+    min-height: 500px;
+    max-height: 100%;
+    float: right;
+}
