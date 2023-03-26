@@ -1,11 +1,24 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Layout from "./components/Layout.js";
+//import Layout from "./components/Layout.js";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Props_Ex from "./study/props/props_Ex";
+import State_Ex from "./study/state/state_Ex";
+import EventHandling_Ex from "./study/eventhandling/eventhandling_Ex";
+import Ref_Ex from "./study/ref/ref_Ex";
+import Iteration_Ex from "./study/iteration_map_key/map_Ex";
 
 function App() {
   return (
     <div>
-      <Layout />
+      <Header />
+      <Footer />
+      <Props_Ex />
+      <State_Ex />
+      <EventHandling_Ex />
+      <Ref_Ex />
+      <Iteration_Ex />
     </div>
   );
 }

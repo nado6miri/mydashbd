@@ -1,3 +1,19 @@
+(React에서 Bootstrap 사용하기)
+
+npm install react-bootstrap bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+<h1>참고로 알아두면 좋은 페이지</h1>
+<p>부트스트랩 내 Examples를 보셔도 좋습니다.</p>
+<p>무료 테마 : https://startbootstrap.com/</p>
+<p>테마 구매 : https://themes.getbootstrap.com/</p>
+<p>테마 구매 : https://wrapbootstrap.com/</p>
+<p>테마 구매 : https://themeforest.net/search/bootstrap</p>
+<p>서버유지 : https://www.iwinv.kr/</p>
+<p>텍스트 에디터 : https://summernote.org/, 
+                    https://ui.toast.com/tui-editor</p>
+<p>경고창 : https://sweetalert2.github.io/</p>
+
 (Project 생성)
 git clone http://mod.lge.com/hub/tdd/heytas.git
 
@@ -56,4 +72,57 @@ function App {} -----  () => {} 로 변경 가능.  arrow 함수는 this가 인�
 (props)
 properties의 줄임말...
 property를 생성해서 component로 값을 넘길 수 있다. - props.js 예제 참고
-const App = () => { return (<div>??</div>); }
+const App = (props) => { return (<div> {props.name} </div>); }
+비구조화 할당 - component에서 매번 props을 쓰지 않도록 객체에서 값을 호출하는 방식
+const App = (props) => {
+    const { name, age } = props;
+     return (<div> {name} </div>); }
+}
+
+const App = (name, age) => {
+     return (<div> {name} </div>); }
+}
+
+class App extends Component {
+    render() {
+        const { name, age } = this.props
+        return { <div> {name} 이고 나이는 {age} 입니다. </div> }
+    }
+}
+
+(PropTypes) - props 의 type (string, ...)을 지정하고자 할때
+MyComponent.propTypes = {
+    name : PropTypes.string
+    age : PropTypes.number.isRequired  // isRequired를 통한 검증
+}
+
+props의 default 값, PropTypes 지정은 class 밖에 또는 안에 할 수 있다.
+
+
+(주요 키워드)
+1. component 종류 : class형 component, 함수형 component
+2. props : 개념, 비구조화 할당, 초기값설정, type 설정, 필수항목 설정
+3. state 
+ - class component에서 state : constructor에서 초기화, constructor없이 초기화 사용방법, 비동기 동작
+ - funcion component에서 useState : 16.8부터 사용가능
+ - callback
+ - state 사용시 주의사항 : spread 연산자 (...)
+4. event 
+ - e 객체 : SyntheticEvent로 web browser의 native event를 감싸는 객체
+           SyntheticEvent는 event가 종료되면 초기화 되므로 추후 참조할 일이 있으면 e.persist()를 호출해 줘야 함.
+ - 별도의 event handler 정의하여 사용하기 (가독성 높이기 위해)           
+
+ 5. ref 
+  - class형 component에서 ref 사용하고 
+    함수형 component에서 ref 사용하려면 Hooks을 사용해야 함. 
+  - 특정 input에 포커스 주기, 스크롤 박스 조작, canvas에 그림 그릴때 DOM접근을 위해 ref를 사용함.
+  1) callback를 통한 ref 설정 : <input ref = { (ref) => { this.input=ref }} />
+  2) createRef를 통한 ref 설정 : input = React.createRef(); <input ref = {this.input} />
+     사용시에는 this.input.current 를 조회하면 됨. callback함수와 다르게 .current 넣어주어야 함.
+  3) 자신이 만든 component에 ref 달기
+    - 이렇게 되면 부모에서 컴포넌트 내부의 ref 에도 접근이 가능함.
+    - state로 특정 component id지정효과 낼 수도 있지만 ref를 이용해서 가능함.
+  4) MyComponent에 ref 달기
+     <MyComponent ref={(ref) => {this.myComponent = ref}} 을 하면 myComponent.input  myComponent.handleClick 등 접근가능
+
+6. map (반복되는 compoenent rendering 할때 사용)

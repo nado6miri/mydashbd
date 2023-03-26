@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // component 는 반드시 부모 요소로 감싸져야 함. 보통 <div></div>를 많이 쓰나 { Fragment } 를 import 해서 <Fragement></Fragement>를 사용해도 됨.
-import MyComponent from "../study/props";
+import MyComponent from "../study/props1";
 
 function MainBody() {
   return (

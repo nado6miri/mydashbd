@@ -12,6 +12,7 @@ function Layout() {
   return (
     <div>
       <Header />
+      <Footer />
       <div>
         <div className="MenuDiv">
           {/* <MainMenu /> */}
@@ -21,7 +22,7 @@ function Layout() {
           <MainBody />
         </div>
       </div>
-      <Footer />
+      <br></br>
     </div>
   );
 }
