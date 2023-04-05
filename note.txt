@@ -206,3 +206,33 @@ props의 default 값, PropTypes 지정은 class 밖에 또는 안에 할 수 있
   - 컴포넌트이 로컬 변수로 사용할때 useRef 사용 - 값이 바뀌어도 렌더링 안됨.
 7. useContext
 8. 사용자 정의 hook
+
+(css styling)
+1. styling 실습
+ - 일반 css 
+ - Sass (Syntactically Awesome Style Sheets) 사용하기 - CSS의 전처리기 중의 하나임. 확장자는 .scss, .sass 
+ - CSS Module 사용하기
+ - styled-component 사용하기
+
+2. css class 이름 작명 : 컴포넌트 이름-클래스형태 - App-header  App-logo  App-link등등
+3. CSS Selector
+ .App 안에 들어있는 테그/클래스를 지정해서 스타일을 적용하고 싶다면 
+ - .App .logo { } 
+ - .App header { }
+
+4. node-sass lib설치하면 Sass 를 CSS로 변환함. : yarn add node-sass
+
+5. CSS Module
+ - CSS를 불러와서 [파일이름]_[클래스이름]_[해시값] 형태로 자동으로 만들어서 컴포넌트 스타일 클래스 이름이 중첩되지 않도록 해 주는 기술임.
+ - .module.css 확장자로 저장하기만 하면 CSS Module이 적용이 됨.
+ - global CSS를 사용하려면 :global .something {} 으로 선언함.
+ - classnames 
+   1) CSS 클래스를 조건부로 설정할때 유용한 라이브러리입니다. (yarn add classnames)
+   2) bind를 이용해서 다중 css 설정하는데 사용
+
+6. styled-components
+ - 스타일링의 새로운 패러다임 : 자바스크립트 파일안에 스타일을 선언하는 방식
+ - CSS in JS 라고 부르며 이러한 라이브러리가 많은데 대표적인게 styled-components 또는 emotion이 대표적임.
+ - .css  .scss확장자를 별도로 만들지 않아도 되는 장점이 있음.
+
+ 
