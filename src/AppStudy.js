@@ -20,6 +20,7 @@ import Hooks_UseCallback_Ex from "./study/hooks/useCallback_Ex";
 import Hooks_UseRef_Ex from "./study/hooks/useRef_Ex";
 import CSSModule_Ex from "./study/styling/CSSModule_Ex";
 import ClassNames_Ex from "./study/styling/Classnames_Ex";
+import Immer_Ex from "./study/immer/immer_Ex";
 
 function getRandomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -72,6 +73,8 @@ function AppStudy() {
       <CSSModule_Ex />
       <br></br>
       <ClassNames_Ex wrapper={true} theme={"inverted"} />
+      <br></br>
+      <Immer_Ex />
     </div>
   );
 }

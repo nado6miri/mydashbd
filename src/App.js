@@ -1,10 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import AppStudy from "./AppStudy";
 
 function App() {
   return (
     <div className="App">
+      <AppStudy />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
