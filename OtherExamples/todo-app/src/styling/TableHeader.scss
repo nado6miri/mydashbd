@@ -1,0 +1,59 @@
+// display : flex --> https://studiomeal.com/archives/197
+.TableHeader_Ex {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    .No {
+        padding: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: #ff6b6b;
+        cursor: pointer;
+        &:hover {
+            color: #e7238b;
+        }
+    }
+
+    .Jira-ID {
+        padding: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: #ff6b6b;
+        cursor: pointer;
+        &:hover {
+            color: #e7238b;
+        }
+    }
+    .Summary {
+        padding: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: #ff6b6b;
+        cursor: pointer;
+        &:hover {
+            color: #e7238b;
+        }
+    }
+    .Assignee {
+        padding: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: #ff6b6b;
+        cursor: pointer;
+        &:hover {
+            color: #e7238b;
+        }
+    }
+    .DueDate{
+        padding: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: #ff6b6b;
+        cursor: pointer;
+        &:hover {
+            color: #e7238b;
+        }
+    }
+
+}

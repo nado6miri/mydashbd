@@ -1,0 +1,9 @@
+.TodoListItem-virtualized {
+    & + & {
+        border-top: 1px solid #45f47f;
+    }
+    &:nth-child(even) {
+        background: #cccdcf;
+    }
+}
+
