@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AppStudy from "./AppStudy";
+import { BrowserRouter } from "react-router-dom";
+import App_Router from "./App_Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/*    <App /> */}
-    <AppStudy />
+    <BrowserRouter>
+      {/* <App /> */}
+      {/*<AppStudy />*/}
+      <App_Router />
+    </BrowserRouter>
+    ,
   </React.StrictMode>
 );
 

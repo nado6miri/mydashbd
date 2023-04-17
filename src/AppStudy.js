@@ -21,6 +21,12 @@ import Hooks_UseRef_Ex from "./study/hooks/useRef_Ex";
 import CSSModule_Ex from "./study/styling/CSSModule_Ex";
 import ClassNames_Ex from "./study/styling/Classnames_Ex";
 import Immer_Ex from "./study/immer/immer_Ex";
+import Router_Ex from "./study/router/router_Ex";
+import { Route } from "react-router-dom";
+import About from "./study/router/router_About";
+import Home from "./study/router/router_Home";
+import Profile from "./study/router/router_Profile";
+import App_Router from "./App_Router";
 
 function getRandomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -75,6 +81,8 @@ function AppStudy() {
       <ClassNames_Ex wrapper={true} theme={"inverted"} />
       <br></br>
       <Immer_Ex />
+      <br></br>
+      <App_Router />
     </div>
   );
 }

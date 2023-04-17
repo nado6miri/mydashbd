@@ -206,6 +206,7 @@ props의 default 값, PropTypes 지정은 class 밖에 또는 안에 할 수 있
   - 컴포넌트이 로컬 변수로 사용할때 useRef 사용 - 값이 바뀌어도 렌더링 안됨.
 7. useContext
 8. 사용자 정의 hook
+  - usePromise (p386)
 
 (css styling)
 1. styling 실습
@@ -285,6 +286,16 @@ yarn add immer
 
 
 
+(SPA - router 사용하기)
+https://velog.io/@velopert/react-router-v6-tutorial
+yarn add react-router-dom 
+1. import { BrowserRouter } from 'react-router-dom';
+   src/index.js 에 <BrowserRouter> <App /> </BrowserRouter>
+2. import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+3. 하나의 페이지에 여러개 경로 설정 : <Route path={("/about", "/info")} element={<About />} />
+4. 서브 Route
+5. 기타 부가기능 : NavLink, Switch, withRouter, history
+아마도 부가기능은 react-router-dom 6.0 이상부터는 없어진것 같음....
 
 
 (production build 방법)
@@ -293,3 +304,8 @@ yarn global add serve
 serve -s build
 
 
+https://newsapi.org/
+
+14장. 외부 api를 연동하여 뉴스 뷰어 만들기
+1. callback 함수 - callback 지욕 -> promise
+2. api 호출 및 데이터 받아오기 : http client - axios (Promise기반 데이터 처리) : yarn add axios
